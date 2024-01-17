@@ -12,8 +12,11 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/react";
 import Image from "next/image";
+import { ThemeSwitcher } from "@/app/themeChecker";
+import { useRouter } from 'next/navigation'
 
 export default function NavigationBar() {
+  const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const menuItems = [
     "Profile",
@@ -35,7 +38,7 @@ export default function NavigationBar() {
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         className="sm:hidden"
       />
-       <NavbarBrand style={{cursor: "pointer"}}>
+       <NavbarBrand style={{cursor: "pointer"}} onClick={() => router.push("/")}>
         <Image src="/animeBox.png" alt="AnimeBox Logo" width={50} height={50} />
         <p className="font-bold bg-gradient-to-r from-orange-600 to-rose-500 via-red-400 text-transparent bg-clip-text text-xl">Anime Box</p>
       </NavbarBrand>
@@ -63,7 +66,7 @@ export default function NavigationBar() {
         <Link href="#">Login</Link>
       </NavbarItem>
       <NavbarItem>
-        <Button as={Link} color="primary" href="#" variant="flat">
+        <Button as={Link} color="primary" href="/test" variant="flat">
           Sign Up
         </Button>
       </NavbarItem>
@@ -84,6 +87,7 @@ export default function NavigationBar() {
         </NavbarMenuItem>
       ))}
     </NavbarMenu>
+    <ThemeSwitcher />
   </Navbar>
   );
 }
