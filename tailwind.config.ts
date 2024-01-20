@@ -13,9 +13,9 @@ const config: Config = {
       padding: {
         DEFAULT: '1rem',
         sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        lg: '5rem',
+        xl: '6rem',
+        '2xl': '7rem',
       },
     },
   },
@@ -25,16 +25,17 @@ const config: Config = {
       themes: {
         light: {
           colors: {
-            primary: "#f45f5e",
+            primary: "#F4153A",
           },
         },
         dark: {
           colors: {
-            primary: "#f45f5e",
+            primary: "#951007",
           },
         },
       },
     }),
+    require('tw-bootstrap-grid-optimizer'),
   ],
 };
 export default config;

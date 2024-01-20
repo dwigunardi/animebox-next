@@ -6,11 +6,60 @@
   /* Your default theme */
   --background: white;
   --foreground: black;
+  --trackbar-dark: #707576;
+  --swiper-navigation-color: #F4153A;
+  --swiper-theme-color: #F4153A;
+  --swiper-pagination-color: #F4153A;
+  --swiper-theme-color: #F4153A;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --swiper-lazy-preloader-color: #F4153A;
 }
+
 
 [data-theme='dark'] {
   --background: black;
   --foreground: white;
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #F4153A #DFE9EB;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--background);
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #F4153A;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #F4A2A2;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #F4153A;
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,6 +71,7 @@
 }
 
 body {
-   background: var(--bg);
+  background: var(--bg);
   color: var(--fg);
+
 }
