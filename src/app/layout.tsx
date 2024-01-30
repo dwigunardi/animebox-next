@@ -25,11 +25,6 @@ export const metadata: Metadata = {
       url: "/favicon/favicon.ico",
     },
   },
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
 };
 
 export default function RootLayout({

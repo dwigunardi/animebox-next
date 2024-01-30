@@ -1,7 +1,32 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['cdn.myanimelist.net', 'api.jikan.moe/v4', 'img.youtube.com', 'i.ytimg.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.myanimelist.net',
+                port: '',
+                pathname: '/**'
+            },
+            {
+                protocol: 'https',
+                hostname: 'api.jikan.moe',
+                port: '',
+                pathname: '/**'
+            },
+            {
+                protocol: 'https',
+                hostname: 'i.ytimg.com',
+                port: '',
+                pathname: '/**'
+            },
+            {
+                protocol: 'https',
+                hostname: 'img.youtube.com',
+                port: '',
+                pathname: '/**'
+            }
+        ]
     }
 }
 
